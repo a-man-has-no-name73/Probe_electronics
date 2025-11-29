@@ -18,8 +18,28 @@ const Footer = () => {
                 </div>
                 <div className="footer-section">
                     <h4>Contact</h4>
-                    <p>Email: support@probeelectronics.com</p>
-                    <p>Phone: +880 1234 567890</p>
+                    <p>Email: <a href="mailto:probeelctronics@gmail.com" className="email-link">probeelctronics@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+8801908744679" className="phone-link">+880 1908 744679</a></p>
+                    <p>
+                        <a 
+                            href="https://www.facebook.com/share/1YPckMYSGj/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="social-link"
+                        >
+                            Facebook Page
+                        </a>
+                    </p>
+                    <p>
+                        <a 
+                            href="https://youtube.com/@probe_electronics?si=4vsFDvjJAX4ljw6I" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="social-link youtube-link"
+                        >
+                            YouTube Channel
+                        </a>
+                    </p>
                 </div>
             </div>
             <div className="footer-bottom">

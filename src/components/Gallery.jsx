@@ -24,27 +24,16 @@ const Gallery = () => {
                     <p className="section-subtitle">A closer look at the Probe Electronics kit.</p>
                 </div>
 
-                <div className="gallery-slideshow-container">
-                    <div className="gallery-slide-wrapper">
-                        {images.map((img, index) => (
-                            <div
-                                key={index}
-                                className={`gallery-slide ${index === currentImageIndex ? 'active' : ''}`}
-                                style={{ backgroundImage: `url(${img})` }}
-                            ></div>
-                        ))}
-                    </div>
-
-                    <div className="gallery-indicators">
-                        {images.map((_, index) => (
-                            <button
-                                key={index}
-                                className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
-                                onClick={() => setCurrentImageIndex(index)}
-                                aria-label={`Go to slide ${index + 1}`}
-                            ></button>
-                        ))}
-                    </div>
+                <div className="gallery-video-container">
+                    <iframe
+                        width="100%"
+                        height="500"
+                        src="https://www.youtube.com/embed/jzmNvUf239M"
+                        title="Probe Electronics Kit Demo"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
                 </div>
             </div>
         </section>

@@ -7,7 +7,6 @@ import Gallery from '@/components/Gallery';
 import BoxContents from '@/components/BoxContents';
 import Specs from '@/components/Specs';
 import Timeline from '@/components/Timeline';
-import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import OrderForm from '@/components/OrderForm';
 import Footer from '@/components/Footer';
@@ -25,7 +24,6 @@ export default function Home() {
         <BoxContents />
         <Specs />
         <Timeline />
-        <Testimonials />
         <FAQ />
         <OrderForm />
         <WhatsAppButton />

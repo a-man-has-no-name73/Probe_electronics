@@ -42,6 +42,32 @@
     color: var(--color-primary);
 }
 
+.footer-section .social-link {
+    color: #4267B2;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.footer-section .social-link.youtube-link {
+    color: #FF0000;
+}
+
+.footer-section .social-link:hover {
+    color: var(--color-primary);
+}
+
+.footer-section .email-link,
+.footer-section .phone-link {
+    color: #aaa;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.footer-section .email-link:hover,
+.footer-section .phone-link:hover {
+    color: var(--color-primary);
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;

@@ -125,6 +125,54 @@
     animation: float 6s ease-in-out infinite;
 }
 
+/* Styles for rotating images */
+.hero-rotating-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+    transform: rotate(-5deg);
+}
+
+.hero-rotating-image:first-child {
+    position: relative;
+}
+
+.hero-rotating-image.active {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Image indicators */
+.hero-image-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.indicator-dot:hover {
+    transform: scale(1.2);
+}
+
+.indicator-dot.active {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 10px rgba(198, 40, 40, 0.5);
+}
+
 .glow-effect {
     position: absolute;
     top: 50%;
