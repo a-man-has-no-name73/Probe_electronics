@@ -1,0 +1,71 @@
+.specs {
+    background-color: #f8f8f8;
+}
+
+.specs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.spec-column {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+}
+
+.spec-heading {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(198, 40, 40, 0.1);
+}
+
+.spec-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.5s ease;
+}
+
+.specs.visible .spec-row {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.spec-row:hover {
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+    transform: translateX(5px);
+}
+
+.spec-label {
+    font-weight: 600;
+    color: var(--color-text-light);
+}
+
+.spec-value {
+    font-weight: 700;
+    color: var(--color-text);
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .specs-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

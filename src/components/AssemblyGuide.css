@@ -1,0 +1,103 @@
+.assembly {
+    background-color: #fff;
+}
+
+.assembly-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.assembly-step-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    aspect-ratio: 1;
+}
+
+.assembly-step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.assembly-step-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.step-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.step-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.assembly-step-card:hover .step-overlay {
+    opacity: 1;
+}
+
+.step-overlay span {
+    color: white;
+    border: 1px solid white;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.assembly-modal {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 800px;
+    width: 90%;
+}
+
+.assembly-modal img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    background: #f0f0f0;
+}
+
+.modal-caption {
+    padding: 1.5rem;
+}
+
+.modal-caption h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.modal-caption p {
+    color: var(--color-text-light);
+}

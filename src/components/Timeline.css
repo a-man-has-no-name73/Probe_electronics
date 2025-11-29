@@ -1,0 +1,112 @@
+.timeline {
+    background-color: #fff;
+    padding: 6rem 0;
+}
+
+.timeline-container {
+    position: relative;
+    margin-top: 4rem;
+    padding: 2rem 0;
+}
+
+.timeline-line-bg {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #e0e0e0;
+    z-index: 1;
+    border-radius: 2px;
+}
+
+.timeline-line-progress {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: 4px;
+    background-color: var(--color-primary);
+    z-index: 2;
+    border-radius: 2px;
+    transition: width 0.1s linear;
+}
+
+.timeline-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3;
+}
+
+.timeline-step {
+    text-align: center;
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border: 4px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.step-icon.active {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(198, 40, 40, 0.3);
+}
+
+.step-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.step-description {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+@media (max-width: 768px) {
+    .timeline-steps {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .timeline-line-bg,
+    .timeline-line-progress {
+        width: 4px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    .timeline-line-progress {
+        height: var(--progress-height, 0%);
+        /* Need to adjust for vertical */
+        width: 4px;
+    }
+
+    /* Vertical implementation would require JS adjustment or different CSS logic */
+    /* For simplicity, hiding line on mobile or making it static */
+    .timeline-line-bg,
+    .timeline-line-progress {
+        display: none;
+    }
+
+    .step-icon {
+        margin-bottom: 1rem;
+    }
+}
