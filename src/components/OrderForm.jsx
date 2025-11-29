@@ -285,7 +285,7 @@ const OrderForm = () => {
                                                 <ol>
                                                     <li>Go to your bKash App or dial *247#</li>
                                                     <li>Choose &quot;Send Money&quot;</li>
-                                                    <li>Enter Number: <strong>017XXXXXXXX</strong></li>
+                                                    <li>Enter Number: <strong>01908744679</strong></li>
                                                     <li>Amount: <strong>৳{total.toLocaleString()}</strong></li>
                                                     <li>Reference: Your Name</li>
                                                 </ol>
@@ -316,35 +316,7 @@ const OrderForm = () => {
                                         {formData.payment === 'nagad' && (
                                             <div className="instruction-box fade-in">
                                                 <p><strong>Nagad Payment:</strong></p>
-                                                <ol>
-                                                    <li>Go to your Nagad App or dial *167#</li>
-                                                    <li>Choose &quot;Send Money&quot;</li>
-                                                    <li>Enter Number: <strong>018XXXXXXXX</strong></li>
-                                                    <li>Amount: <strong>৳{total.toLocaleString()}</strong></li>
-                                                    <li>Reference: Your Name</li>
-                                                </ol>
-                                                <div className="form-group" style={{ marginTop: '1rem', marginBottom: 0 }}>
-                                                    <input
-                                                        type="text"
-                                                        name="transactionId"
-                                                        value={formData.transactionId}
-                                                        onChange={handleChange}
-                                                        placeholder=" "
-                                                    />
-                                                    <label>Enter Transaction ID</label>
-                                                </div>
-                                                {errors.transactionId && <span className="error-text">{errors.transactionId}</span>}
-                                                <div className="form-group" style={{ marginTop: '1rem', marginBottom: 0 }}>
-                                                    <input
-                                                        type="tel"
-                                                        name="transactionPhone"
-                                                        value={formData.transactionPhone}
-                                                        onChange={handleChange}
-                                                        placeholder=" "
-                                                    />
-                                                    <label>Phone Number Used for Payment</label>
-                                                </div>
-                                                {errors.transactionPhone && <span className="error-text">{errors.transactionPhone}</span>}
+                                                <p style={{ color: '#f6921e', fontSize: '1.1rem', marginTop: '1rem' }}>Not available yet. Please choose Cash on Delivery or bKash.</p>
                                             </div>
                                         )}
                                     </div>
