@@ -47,7 +47,7 @@ const BoxContents = () => {
                     <div className="box-decoration"></div>
                 </div>
                 <div className="box-info animate-fade-up delay-200">
-                    <h2 className="section-title">What's Inside the Box?</h2>
+                    <h2 className="section-title">What&apos;s Inside the Box?</h2>
                     <p className="section-subtitle">Everything you need to build your own lab.</p>
                     <ul className="box-list">
                         {items.map((item, index) => (

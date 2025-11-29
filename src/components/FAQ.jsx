@@ -38,7 +38,7 @@ const FAQ = () => {
             <div className="container">
                 <div className="section-header">
                     <h2 className="section-title">Frequently Asked Questions</h2>
-                    <p className="section-subtitle">Got questions? We've got answers.</p>
+                    <p className="section-subtitle">Got questions? We&apos;ve got answers.</p>
                 </div>
 
                 <div className="faq-container">

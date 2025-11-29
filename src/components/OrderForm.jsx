@@ -277,7 +277,7 @@ const OrderForm = () => {
                                                 <p><strong>bKash Payment:</strong></p>
                                                 <ol>
                                                     <li>Go to your bKash App or dial *247#</li>
-                                                    <li>Choose "Send Money"</li>
+                                                    <li>Choose &quot;Send Money&quot;</li>
                                                     <li>Enter Number: <strong>017XXXXXXXX</strong></li>
                                                     <li>Amount: <strong>৳3600</strong></li>
                                                     <li>Reference: Your Name</li>
@@ -311,7 +311,7 @@ const OrderForm = () => {
                                                 <p><strong>Nagad Payment:</strong></p>
                                                 <ol>
                                                     <li>Go to your Nagad App or dial *167#</li>
-                                                    <li>Choose "Send Money"</li>
+                                                    <li>Choose &quot;Send Money&quot;</li>
                                                     <li>Enter Number: <strong>018XXXXXXXX</strong></li>
                                                     <li>Amount: <strong>৳3600</strong></li>
                                                     <li>Reference: Your Name</li>

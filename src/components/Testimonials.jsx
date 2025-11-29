@@ -72,7 +72,7 @@ const Testimonials = () => {
               <div className="review-rating">
                 {"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}
               </div>
-              <p className="review-text">"{review.text}"</p>
+              <p className="review-text">&quot;{review.text}&quot;</p>
               <div className="review-author">
                 <div className="author-avatar">{review.name.charAt(0)}</div>
                 <div className="author-info">
