@@ -106,8 +106,9 @@ const OrderForm = () => {
     // Calculate prices
     const unitPrice = 3500;
     const deliveryCharge = 100;
+    const paymentSurcharge = (formData.payment === 'bkash' || formData.payment === 'nagad') ? 50 : 0;
     const subtotal = unitPrice * formData.quantity;
-    const total = subtotal + deliveryCharge;
+    const total = subtotal + deliveryCharge + paymentSurcharge;
 
     return (
         <section id="order" className="order-section section">
@@ -127,6 +128,12 @@ const OrderForm = () => {
                                 <span>Delivery Charge</span>
                                 <span>৳{deliveryCharge}</span>
                             </div>
+                            {paymentSurcharge > 0 && (
+                                <div className="summary-item">
+                                    <span>Payment Processing Fee</span>
+                                    <span>৳{paymentSurcharge}</span>
+                                </div>
+                            )}
                             <div className="summary-total">
                                 <span>Total</span>
                                 <span>৳{total.toLocaleString()}</span>
@@ -269,7 +276,7 @@ const OrderForm = () => {
                                     <div className="payment-instructions">
                                         {formData.payment === 'cod' && (
                                             <div className="instruction-box fade-in">
-                                                <p><strong>Cash on Delivery:</strong> Pay the full amount (৳3600) to the delivery person when you receive the package.</p>
+                                                <p><strong>Cash on Delivery:</strong> Pay the full amount (৳{total.toLocaleString()}) to the delivery person when you receive the package.</p>
                                             </div>
                                         )}
                                         {formData.payment === 'bkash' && (
@@ -279,7 +286,7 @@ const OrderForm = () => {
                                                     <li>Go to your bKash App or dial *247#</li>
                                                     <li>Choose &quot;Send Money&quot;</li>
                                                     <li>Enter Number: <strong>017XXXXXXXX</strong></li>
-                                                    <li>Amount: <strong>৳3600</strong></li>
+                                                    <li>Amount: <strong>৳{total.toLocaleString()}</strong></li>
                                                     <li>Reference: Your Name</li>
                                                 </ol>
                                                 <div className="form-group" style={{ marginTop: '1rem', marginBottom: 0 }}>
@@ -313,7 +320,7 @@ const OrderForm = () => {
                                                     <li>Go to your Nagad App or dial *167#</li>
                                                     <li>Choose &quot;Send Money&quot;</li>
                                                     <li>Enter Number: <strong>018XXXXXXXX</strong></li>
-                                                    <li>Amount: <strong>৳3600</strong></li>
+                                                    <li>Amount: <strong>৳{total.toLocaleString()}</strong></li>
                                                     <li>Reference: Your Name</li>
                                                 </ol>
                                                 <div className="form-group" style={{ marginTop: '1rem', marginBottom: 0 }}>
